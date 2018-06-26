@@ -17,6 +17,9 @@ set encoding=utf-8 nobomb
 set binary
 set noeol
 
+
+set expandtab
+
 " Don’t create backups when editing files in certain directories
 set backupskip=/tmp/*,/private/tmp/*
 
@@ -112,9 +115,47 @@ map ; :Buffer<cr>
 map <leader>j :GitFiles<cr>
 map <leader>J :Files<cr>
 
+" Fuzzy find path with ,gf (useful when a project uses absolute imports
+map <Leader>gf :call fzf#vim#files('', {'options':'--query '.expand('<cfile>')})<CR>
+
 """"""""""""""""""
 """ GIT GUTTER """
 """"""""""""""""""
+let g:gitgutter_enabled = 1
+set signcolumn=yes
 nmap ]g :GitGutterNextHunk<CR>
-
 nmap [g :GitGutterPrevHunk<CR>
+
+"""""""""""
+""" ALE """
+"""""""""""
+let g:ale_completion_enabled = 1
+let g:ale_fixers = {
+\   'javascript': ['prettier', 'eslint'],
+\}
+
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_use_local_config = 1
+
+let g:ale_linter_aliases = {'jsx': ['html', 'javascript', 'css']}
+
+let g:ale_sign_warning = '▲'
+let g:ale_sign_error = '✗'
+nmap <leader>ll :ALENextWrap<CR>
+nmap <leader>lo :ALEPreviousWrap<CR>
+augroup VimDiff
+  autocmd!
+  autocmd VimEnter,FilterWritePre * if &diff | ALEDisable | endif
+augroup END
+augroup FiletypeGroup
+    autocmd!
+    au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+augroup END
+
+""""""""""""
+""" FLOW """
+""""""""""""
+
+let g:flow#enable = 0
+let g:flow#omnifunc = 1
+let g:flow#timeout = 0.4
