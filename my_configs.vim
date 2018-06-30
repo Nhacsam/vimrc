@@ -159,3 +159,12 @@ augroup END
 let g:flow#enable = 0
 let g:flow#omnifunc = 1
 let g:flow#timeout = 0.4
+
+""""""""""""""""""
+""" UtilsSnips """
+""""""""""""""""""
+
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim_runtime/UltiSnips']
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-J>"
