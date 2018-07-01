@@ -23,10 +23,10 @@ au FileType python set indentkeys-=0#
 """"""""""""""""""""""""""""""
 " => JavaScript section
 """""""""""""""""""""""""""""""
-au FileType javascript setl fen
+au FileType javascript setl nofen
 au FileType javascript setl nocindent
 
-au FileType javascript imap <c-t> $log();<esc>hi
+au FileType javascript imap <c-t> console.log();<esc>hi
 au FileType javascript imap <c-a> alert();<esc>hi
 
 au FileType javascript inoremap <buffer> $r return 

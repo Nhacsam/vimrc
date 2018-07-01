@@ -129,20 +129,19 @@ nmap [g :GitGutterPrevHunk<CR>
 """""""""""
 """ ALE """
 """""""""""
-let g:ale_completion_enabled = 1
 let g:ale_fixers = {
-\   'javascript': ['prettier', 'eslint'],
+\   'javascript': ['prettier', 'eslint', 'prettier_eslint', 'standard'],
 \}
-
-let g:ale_fix_on_save = 1
-let g:ale_javascript_prettier_use_local_config = 1
-
-let g:ale_linter_aliases = {'jsx': ['html', 'javascript', 'css']}
+let g:ale_linters = {
+\   'javascript': ['htmlhint', 'tsserver', 'eslint', 'flow', 'standard' ],
+\}
+let g:ale_linter_aliases = {'javascript.jsx': ['html', 'javascript']}
 
 let g:ale_sign_warning = '▲'
 let g:ale_sign_error = '✗'
 nmap <leader>ll :ALENextWrap<CR>
 nmap <leader>lo :ALEPreviousWrap<CR>
+
 augroup VimDiff
   autocmd!
   autocmd VimEnter,FilterWritePre * if &diff | ALEDisable | endif
@@ -151,6 +150,12 @@ augroup FiletypeGroup
     autocmd!
     au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 augroup END
+
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_use_local_config = 1
+
 
 """"""""""""
 """ FLOW """
