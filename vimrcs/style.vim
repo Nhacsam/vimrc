@@ -3,15 +3,67 @@
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " colorscheme peaksea
-colorscheme gruvbox
 set background=dark
-let g:gruvbox_contrast='hard'
+
+let IS_TERMINAL = $IS_TERMINAL == 'true'
+let IS_FONT_INSTALLED = $IS_FONT_INSTALLED == 'true'
+
+function! s:base16_customize() abort
+  call Base16hi("xmlEndTag"           ,g:base16_gui0D, "", g:base16_cterm0D, "", "", "")
+  call Base16hi("xmlTag"              ,g:base16_gui0D, "", g:base16_cterm0D, "", "", "")
+  call Base16hi("xmlTagName"          ,g:base16_gui0D, "", g:base16_cterm0D, "", "", "")
+  call Base16hi("xmlAttrib"           ,g:base16_gui0A, "", g:base16_cterm0A, "", "", "")
+  call Base16hi("jsArrowFunction"     ,g:base16_gui0D, "", g:base16_cterm0D, "", "", "")
+  call Base16hi("jsFlowTypeStatement" ,g:base16_gui0A, "", g:base16_cterm0A, "", "", "")
+  call Base16hi("jsFlowDefinition"    ,g:base16_gui0A, "", g:base16_cterm0A, "", "", "")
+  call Base16hi("jsFlowNoise"         ,g:base16_gui0A, "", g:base16_cterm0A, "", "", "")
+  call Base16hi("jsFlowType"          ,g:base16_gui09, "", g:base16_cterm09, "", "", "")
+  call Base16hi("jsFlowDeclareBlock"  ,g:base16_gui0D, "", g:base16_cterm0D, "", "", "")
+  call Base16hi("jsFlow9rrow9rguments",g:base16_gui05, "", g:base16_cterm05, "", "", "")
+  call Base16hi("jsFlowObject"        ,g:base16_gui0A, "", g:base16_cterm0A, "", "", "")
+  call Base16hi("Visual"              ,"", g:base16_gui03, "", g:base16_cterm03, "", "")
+endfunction
+
+
+if IS_TERMINAL 
+  source ~/.vimrc_background
+  let g:airline_theme='base16'
+
+elseif filereadable(expand("~/.vimrc_background"))
+
+  let base16colorspace=256
+  source ~/.vimrc_background
+
+  let g:airline_theme='base16_shell'
+  let g:airline#extensions#tmuxline#snapshot_file = "~/.tmux-statusline-colors.conf"
+
+  call s:base16_customize()
+  augroup on_change_colorschema
+    autocmd!
+    autocmd ColorScheme * call s:base16_customize()
+  augroup END
+
+else
+  colorscheme gruvbox
+  let g:airline_theme='gruvbox'
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim Airline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline_solarized_bg='dark'
-let g:airline_theme='gruvbox'
-" let g:airline_theme='powerlineish'
-let g:airline_powerline_fonts = 1
 
+if IS_FONT_INSTALLED
+  let g:airline_powerline_fonts = 1
+endif
+
+
+" " a little more informative version of the above
+" nmap <Leader>s :call <SID>SynStack()<CR>
+
+" function! <SID>SynStack()
+"     if !exists("*synstack")
+"         return
+"     endif
+"     echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+" endfunc

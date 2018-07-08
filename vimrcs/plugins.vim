@@ -73,6 +73,4 @@ let g:UltiSnipsJumpBackwardTrigger="<c-J>"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'jsformatter'
 
-let g:airline#extensions#tmuxline#snapshot_file = "~/.tmux-statusline-colors.conf"
-
 let g:airline_section_z = "%p%% : \ue0a1:%l/%L: Col:%c"

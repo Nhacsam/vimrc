@@ -3,6 +3,8 @@
 """"""""""""""""""""""""""""""
 let s:vim_runtime = expand('<sfile>:p:h')."/."
 call pathogen#infect(s:vim_runtime.'/plugins/{}')
+call pathogen#infect(s:vim_runtime.'/colors_plugins/{}')
+call pathogen#infect(s:vim_runtime.'/my_plugins/{}')
 call pathogen#helptags()
 
 source ~/.vim_runtime/vimrcs/functions.vim

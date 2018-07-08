@@ -5,6 +5,13 @@ au FileType javascript setl nofen
 au FileType javascript setl nocindent
 
 """"""""""""""""""""""""""""""
+" => Syntax Coloring
+"""""""""""""""""""""""""""""""
+
+let g:javascript_plugin_flow = 1
+let g:javascript_plugin_jsdoc = 1
+
+""""""""""""""""""""""""""""""
 " => Shortcuts
 """"""""""""""""""""""""""""""""
 au FileType javascript imap <c-t> console.log();<esc>hi
