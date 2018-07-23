@@ -41,17 +41,17 @@ map <leader>x :Bclose<cr>:tabclose<cr>gT
 
 " Move a line of text using ALT+[jk] or Command+[jk] on mac
 " @TODO to Fix ?
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+" nmap <M-j> mz:m+<cr>`z
+" nmap <M-k> mz:m-2<cr>`z
+" vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+" vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
-if has("mac") || has("macunix")
-  nmap <D-j> <M-j>
-  nmap <D-k> <M-k>
-  vmap <D-j> <M-j>
-  vmap <D-k> <M-k>
-endif
+" if has("mac") || has("macunix")
+"   nmap <D-j> <M-j>
+"   nmap <D-k> <M-k>
+"   vmap <D-j> <M-j>
+"   vmap <D-k> <M-k>
+" endif
 
 " Clean Extra spaces at the end of lines
 noremap <leader>cs :call CleanExtraSpaces()<CR>
@@ -67,7 +67,7 @@ map <leader>j :GitFiles<cr>
 map <leader>J :Files<cr>
 
 " Fuzzy find path with ,gf (useful when a project uses absolute imports
-map <Leader>f :call fzf#vim#files('', {'options':'--query '.expand('<cfile>')})<CR>
+au FileType javascript map <Leader>f :call fzf#vim#files('', {'options':'--query '.expand('<cfile>')})<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Linter Errors

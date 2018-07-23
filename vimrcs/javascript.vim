@@ -29,12 +29,6 @@ autocmd BufEnter *.js,*.ts iabbr zzz console.log('ZZZ',
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ale
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ale_fixers = {
-\   'javascript': ['prettier', 'eslint', 'prettier_eslint', 'standard'],
-\}
-let g:ale_linters = {
-\   'javascript': ['htmlhint', 'tsserver', 'eslint', 'flow', 'standard' ],
-\}
 let g:ale_linter_aliases = {'javascript.jsx': ['html', 'javascript']}
 
 let g:ale_javascript_prettier_use_local_config = 1

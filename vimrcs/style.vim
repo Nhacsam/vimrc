@@ -21,7 +21,22 @@ function! s:base16_customize() abort
   call Base16hi("jsFlowDeclareBlock"  ,g:base16_gui0D, "", g:base16_cterm0D, "", "", "")
   call Base16hi("jsFlow9rrow9rguments",g:base16_gui05, "", g:base16_cterm05, "", "", "")
   call Base16hi("jsFlowObject"        ,g:base16_gui0A, "", g:base16_cterm0A, "", "", "")
-  call Base16hi("Visual"              ,"", g:base16_gui03, "", g:base16_cterm03, "", "")
+  call Base16hi("Visual"              ,"", g:base16_gui03, "", g:base16_cterm03, "", "" )
+
+  let g:fzf_colors =
+  \ { 'fg':      ['fg', 'Normal'],
+    \ 'bg':      ['bg', 'Normal'],
+    \ 'hl':      ['fg', 'Title'],
+    \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+    \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+    \ 'hl+':     ['fg', 'Statement'],
+    \ 'info':    ['fg', 'Label'],
+    \ 'border':  ['fg', 'Ignore'],
+    \ 'prompt':  ['fg', 'Label'],
+    \ 'pointer': ['fg', 'Special'],
+    \ 'marker':  ['fg', 'Keyword'],
+    \ 'spinner': ['fg', 'Special'],
+    \ 'header':  ['fg', 'Title'] }
 endfunction
 
 

@@ -28,9 +28,6 @@ set mouse=a
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
 
-" Allow cursor keys in insert mode
-set esckeys
-
 " Allow backspace in insert mode
 set backspace=indent,eol,start
 set whichwrap+=<,>,h,l

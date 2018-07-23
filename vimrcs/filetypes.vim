@@ -35,19 +35,6 @@ au FileType python set indentkeys-=0#
 """""""""""""""""""""""""""""""
 au FileType gitcommit call setpos('.', [0, 1, 1, 0])
 
-
-""""""""""""""""""""""""""""""
-" => Shell section
-""""""""""""""""""""""""""""""
-if exists('$TMUX') 
-    if has('nvim')
-        set termguicolors
-    else
-        set term=screen-256color 
-    endif
-endif
-
-
 """"""""""""""""""""""""""""""
 " => Twig section
 """"""""""""""""""""""""""""""
@@ -59,3 +46,14 @@ autocmd BufRead *.twig set syntax=html filetype=html
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
+
+"""""""""""""""""""""""
+" => PHP
+""""""""""""""""""""""
+
+let g:phpcomplete_mappings = {
+  \ 'jump_to_def': ',f',
+  \ }
+
+let g:symfony_app_console_path= "bin/console"
+let g:ale_php_cs_fixer_options= ' --rules=@Symfony'
