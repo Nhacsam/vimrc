@@ -2,8 +2,12 @@
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
 let s:vim_runtime = expand('<sfile>:p:h')."/."
-call pathogen#infect(s:vim_runtime.'/plugins/{}')
-call pathogen#infect(s:vim_runtime.'/colors_plugins/{}')
+call pathogen#infect(s:vim_runtime.'/plugins/features/{}')
+call pathogen#infect(s:vim_runtime.'/plugins/colors/{}')
+call pathogen#infect(s:vim_runtime.'/plugins/language/{}')
+call pathogen#infect(s:vim_runtime.'/plugins/completion/{}')
+call pathogen#infect(s:vim_runtime.'/plugins/interface/{}')
+call pathogen#infect(s:vim_runtime.'/plugins/integration/{}')
 call pathogen#infect(s:vim_runtime.'/my_plugins/{}')
 call pathogen#helptags()
 

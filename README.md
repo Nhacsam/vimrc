@@ -1,6 +1,62 @@
-![VIM](https://dnp4pehkvoo6n.cloudfront.net/43c5af597bd5c1a64eb1829f011c208f/as/Ultimate%20Vimrc.svg)
+![VIM](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Vimlogo.svg/220px-Vimlogo.svg.png)
 
 # The Ultimate vimrc
+
+Welcome to my awesome vim/neovim configuration. You will find there everything you need for everyday development with vim or neovim.
+
+This configuration is based and inspired by [the amix one](https://github.com/amix/vimrc). Thanks to him !!
+
+All plugins and options are optimized for Javascript and PHP development. 
+
+
+
+## Basic Installation
+
+
+The basic installation includes the most essentials plugins and teh easiest to install.
+To install it simply do following from your terminal:
+
+	git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+	sh ~/.vim_runtime/install.sh
+
+
+
+
+
+## Main Shorcut
+
+
+
+Press `+` to expand the visual selection and `_` to shrink it.
+
+
+### Comment lines
+
+Use `gcc` to comment out a line (takes a count), `gc` to comment out the target of a motion. `gcu` uncomments a set of adjacent commented lines.
+
+[See more](https://github.com/tpope/vim-commentary)
+
+## Plugins
+
+I recommend reading the docs of these plugins to understand them better. Each plugin provides a much better Vim experience!
+
+* [ack.vim](https://github.com/mileszs/ack.vim): Vim plugin for `the_silver_searcher` (ag) or ack -- a wicked fast grep
+* [goyo.vim](https://github.com/junegunn/goyo.vim): 
+* [NERD Tree](https://github.com/scrooloose/nerdtree): A tree explorer plugin for vim
+* [Tabular](https://github.com/godlygeek/tabular): Line up text with tabs
+* [open_file_under_cursor.vim](https://github.com/amix/open_file_under_cursor.vim): Open file under cursor when pressing `gf`
+* [pathogen.vim](https://github.com/tpope/vim-pathogen): Manage your vim runtimepath 
+* [ale](https://github.com/w0rp/ale): Syntax and lint checking for vim (async)
+* [vim-commentary](https://github.com/tpope/vim-commentary): Comment stuff out.  
+* [vim-expand-region](https://github.com/terryma/vim-expand-region): Allows you to visually select increasingly larger regions of text using the same key combination
+* [vim-fugitive](https://github.com/tpope/vim-fugitive): A Git wrapper so awesome, it should be illegal
+* [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors): Sublime Text style multiple selections for Vim with CTRL+N 
+* [vim-fugitive](https://github.com/tpope/vim-fugitive): Git integration
+
+
+
+
+
 
 Over the last 10 years, I have used and tweaked Vim. This configuration is the ultimate vimrc (or at least my version of it).
 

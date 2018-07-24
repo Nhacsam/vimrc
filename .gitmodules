@@ -1,0 +1,123 @@
+[submodule "misc/fonts"]
+	path = misc/fonts
+	url = https://github.com/powerline/fonts.git
+[submodule "misc/base16-shell"]
+	path = misc/base16-shell
+	url = git@github.com:chriskempson/base16-shell.git
+[submodule "colors_plugins/base16-vim"]
+	path = plugins/colors/base16-vim
+	url = git@github.com:chriskempson/base16-vim.git
+[submodule "misc/base16-fzf"]
+	path = misc/base16-fzf
+	url = git@github.com:nicodebo/base16-fzf.git
+[submodule "plugins/colors/gruvbox"]
+	path = plugins/colors/gruvbox
+	url = git@github.com:morhetz/gruvbox.git
+[submodule "plugins/features/LanguageClient-neovim"]
+	path = plugins/completion/LanguageClient-neovim
+	url = git@github.com:autozimu/LanguageClient-neovim.git
+[submodule "plugins/features/ack.vim"]
+	path = plugins/features/ack.vim
+	url = git@github.com:mileszs/ack.vim.git
+[submodule "plugins/features/ale"]
+	path = plugins/integration/ale
+	url = https://github.com/w0rp/ale
+[submodule "plugins/features/comfortable-motion.vim"]
+	path = plugins/features/comfortable-motion.vim
+	url = https://github.com/yuttie/comfortable-motion.vim
+[submodule "plugins/features/deoplete.nvim"]
+	path = plugins/features/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim.git
+[submodule "plugins/features/echodoc"]
+	path = plugins/features/echodoc
+	url = https://github.com/shougo/echodoc
+[submodule "misc/fzf"]
+	path = misc/fzf
+	url = https://github.com/junegunn/fzf
+[submodule "plugins/features/fzf.vim"]
+	path = plugins/features/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
+[submodule "plugins/features/nerdtree"]
+	path = plugins/features/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "plugins/features/goyo.vim"]
+	path = plugins/features/goyo.vim
+	url = https://github.com/junegunn/goyo.vim
+[submodule "plugins/features/nvim-yarp"]
+	path = plugins/features/nvim-yarp
+	url = https://github.com/roxma/nvim-yarp
+[submodule "plugins/features/open_file_under_cursor.vim"]
+	path = plugins/features/open_file_under_cursor.vim
+	url = https://github.com/amix/open_file_under_cursor.vim
+[submodule "plugins/features/tabular"]
+	path = plugins/features/tabular
+	url = https://github.com/godlygeek/tabular
+[submodule "plugins/features/tlib_vim"]
+	path = plugins/features/tlib_vim
+	url = https://github.com/tomtom/tlib_vim
+[submodule "plugins/features/tmuxline.vim"]
+	path = plugins/features/tmuxline.vim
+	url = https://github.com/edkolev/tmuxline.vim
+[submodule "plugins/features/ultisnips"]
+	path = plugins/features/ultisnips
+	url = https://github.com/sirver/ultisnips
+[submodule "plugins/features/tpope-vim-abolish"]
+	path = plugins/features/tpope-vim-abolish
+	url = https://github.com/tpope/tpope-vim-abolish
+[submodule "plugins/features/vim-addon-mw-utils"]
+	path = plugins/features/vim-addon-mw-utils
+	url = https://github.com/marcweber/vim-addon-mw-utils
+[submodule "plugins/features/vim-airline"]
+	path = plugins/features/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "plugins/features/vim-airline-themes"]
+	path = plugins/features/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "plugins/features/vim-commentary"]
+	path = plugins/features/vim-commentary
+	url = https://github.com/joom/vim-commentary
+[submodule "plugins/features/vim-hug-neovim-rpc"]
+	path = plugins/features/vim-hug-neovim-rpc
+	url = https://github.com/roxma/vim-hug-neovim-rpc
+[submodule "plugins/features/vim-expand-region"]
+	path = plugins/features/vim-expand-region
+	url = https://github.com/terryma/vim-expand-region
+[submodule "plugins/features/vim-fugitive"]
+	path = plugins/features/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "plugins/features/vim-gitgutter"]
+	path = plugins/features/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "plugins/features/vim-multiple-cursors"]
+	path = plugins/features/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors
+[submodule "plugins/features/vim-surround"]
+	path = plugins/features/vim-surround
+	url = https://github.com/anyakichi/vim-surround
+[submodule "plugins/language-syntax/vim-jsx"]
+	path = plugins/language/vim-jsx
+	url = https://github.com/mxw/vim-jsx
+[submodule "plugins/language/vim-javascript"]
+	path = plugins/language/vim-javascript
+	url = https://github.com/pangloss/vim-javascript
+[submodule "plugins/language/vim-swift"]
+	path = plugins/language/vim-swift
+	url = https://github.com/toyamarinyon/vim-swift
+[submodule "plugins/language/nginx.vim"]
+	path = plugins/language/nginx.vim
+	url = https://github.com/vim-scripts/nginx.vim
+[submodule "plugins/language/vim-less"]
+	path = plugins/language/vim-less
+	url = https://github.com/groenewege/vim-less
+[submodule "plugins/language/vim-markdown"]
+	path = plugins/language/vim-markdown
+	url = https://github.com/tpope/vim-markdown
+[submodule "plugins/language/vim-node"]
+	path = plugins/language/vim-node
+	url = https://github.com/moll/vim-node.git
+[submodule "plugins/features/vim-zenroom2"]
+	path = plugins/features/vim-zenroom2
+	url = https://github.com/amix/vim-zenroom2
+[submodule "plugins/completion/flow-language-server"]
+	path = plugins/completion/flow-language-server
+	url = https://github.com/flowtype/flow-language-server.git

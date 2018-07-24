@@ -66,8 +66,6 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim Airline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:airline_solarized_bg='dark'
-
 if IS_FONT_INSTALLED
   let g:airline_powerline_fonts = 1
 endif

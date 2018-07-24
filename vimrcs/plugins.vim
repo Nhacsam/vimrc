@@ -35,17 +35,21 @@ let g:gitgutter_enabled = 1
 set signcolumn=yes
 nmap ]g :GitGutterNextHunk<CR>
 nmap [g :GitGutterPrevHunk<CR>
-"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Fugitive (Git integration)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <leader>b :Gblame<cr> 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fzf : Global Search
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set rtp+=/usr/local/opt/fzf
+set rtp+=~/.fzf
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Langage Client : Autocomplete
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 let g:deoplete#enable_at_startup = 1
 
 let g:deoplete#auto_complete_delay=150
@@ -113,3 +117,10 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'jsformatter'
 
 let g:airline_section_z = "%p%% : \ue0a1:%l/%L: Col:%c"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => ACK
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif

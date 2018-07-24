@@ -82,7 +82,7 @@ nmap <leader>lo :ALEPreviousWrap<CR>
 map <leader>ss :setlocal spell!<cr>
 "
 " Pressing ,sf will toggle french spell checking
-map <leader>ss :setlocal spell spelllang=fr_FR<cr>
+map <leader>sf :setlocal spell spelllang=fr_FR<cr>
 
 " Shortcuts using <leader>
 map <leader>sn ]s

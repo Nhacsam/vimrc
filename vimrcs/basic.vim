@@ -21,6 +21,9 @@ set nocompatible
 " Enable mouse in all modes
 set mouse=a
 
+" Open all fold
+set nofen
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
