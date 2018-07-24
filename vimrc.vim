@@ -7,7 +7,7 @@ call pathogen#infect(s:vim_runtime.'/plugins/colors/{}')
 call pathogen#infect(s:vim_runtime.'/plugins/language/{}')
 call pathogen#infect(s:vim_runtime.'/plugins/completion/{}')
 call pathogen#infect(s:vim_runtime.'/plugins/interface/{}')
-call pathogen#infect(s:vim_runtime.'/plugins/integration/{}')
+call pathogen#infect(s:vim_runtime.'/plugins/library/{}')
 call pathogen#infect(s:vim_runtime.'/my_plugins/{}')
 call pathogen#helptags()
 

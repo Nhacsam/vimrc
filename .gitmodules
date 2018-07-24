@@ -20,16 +20,16 @@
 	path = plugins/features/ack.vim
 	url = git@github.com:mileszs/ack.vim.git
 [submodule "plugins/features/ale"]
-	path = plugins/integration/ale
+	path = plugins/features/ale
 	url = https://github.com/w0rp/ale
 [submodule "plugins/features/comfortable-motion.vim"]
 	path = plugins/features/comfortable-motion.vim
 	url = https://github.com/yuttie/comfortable-motion.vim
 [submodule "plugins/features/deoplete.nvim"]
-	path = plugins/features/deoplete.nvim
+	path = plugins/completion/deoplete.nvim
 	url = https://github.com/Shougo/deoplete.nvim.git
 [submodule "plugins/features/echodoc"]
-	path = plugins/features/echodoc
+	path = plugins/interface/echodoc
 	url = https://github.com/shougo/echodoc
 [submodule "misc/fzf"]
 	path = misc/fzf
@@ -41,10 +41,10 @@
 	path = plugins/features/nerdtree
 	url = https://github.com/scrooloose/nerdtree
 [submodule "plugins/features/goyo.vim"]
-	path = plugins/features/goyo.vim
+	path = plugins/interface/goyo.vim
 	url = https://github.com/junegunn/goyo.vim
 [submodule "plugins/features/nvim-yarp"]
-	path = plugins/features/nvim-yarp
+	path = plugins/library/nvim-yarp
 	url = https://github.com/roxma/nvim-yarp
 [submodule "plugins/features/open_file_under_cursor.vim"]
 	path = plugins/features/open_file_under_cursor.vim
@@ -53,31 +53,31 @@
 	path = plugins/features/tabular
 	url = https://github.com/godlygeek/tabular
 [submodule "plugins/features/tlib_vim"]
-	path = plugins/features/tlib_vim
+	path = plugins/library/tlib_vim
 	url = https://github.com/tomtom/tlib_vim
 [submodule "plugins/features/tmuxline.vim"]
-	path = plugins/features/tmuxline.vim
+	path = plugins/interface/tmuxline.vim
 	url = https://github.com/edkolev/tmuxline.vim
 [submodule "plugins/features/ultisnips"]
-	path = plugins/features/ultisnips
+	path = plugins/completion/ultisnips
 	url = https://github.com/sirver/ultisnips
 [submodule "plugins/features/tpope-vim-abolish"]
 	path = plugins/features/tpope-vim-abolish
 	url = https://github.com/tpope/tpope-vim-abolish
 [submodule "plugins/features/vim-addon-mw-utils"]
-	path = plugins/features/vim-addon-mw-utils
+	path = plugins/library/vim-addon-mw-utils
 	url = https://github.com/marcweber/vim-addon-mw-utils
 [submodule "plugins/features/vim-airline"]
-	path = plugins/features/vim-airline
+	path = plugins/interface/vim-airline
 	url = https://github.com/vim-airline/vim-airline
 [submodule "plugins/features/vim-airline-themes"]
-	path = plugins/features/vim-airline-themes
+	path = plugins/interface/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
 [submodule "plugins/features/vim-commentary"]
 	path = plugins/features/vim-commentary
 	url = https://github.com/joom/vim-commentary
 [submodule "plugins/features/vim-hug-neovim-rpc"]
-	path = plugins/features/vim-hug-neovim-rpc
+	path = plugins/library/vim-hug-neovim-rpc
 	url = https://github.com/roxma/vim-hug-neovim-rpc
 [submodule "plugins/features/vim-expand-region"]
 	path = plugins/features/vim-expand-region
@@ -86,7 +86,7 @@
 	path = plugins/features/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
 [submodule "plugins/features/vim-gitgutter"]
-	path = plugins/features/vim-gitgutter
+	path = plugins/interface/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
 [submodule "plugins/features/vim-multiple-cursors"]
 	path = plugins/features/vim-multiple-cursors
@@ -116,7 +116,7 @@
 	path = plugins/language/vim-node
 	url = https://github.com/moll/vim-node.git
 [submodule "plugins/features/vim-zenroom2"]
-	path = plugins/features/vim-zenroom2
+	path = plugins/interface/vim-zenroom2
 	url = https://github.com/amix/vim-zenroom2
 [submodule "plugins/completion/flow-language-server"]
 	path = plugins/completion/flow-language-server
