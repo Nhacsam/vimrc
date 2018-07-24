@@ -168,14 +168,14 @@ vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
 "   <leader>cc
 "
 " To go to the next search result do:
-"   <leader>n
+"   <leader>N
 "
 " To go to the previous search results do:
 "   <leader>p
 "
 map <leader>cc :botright cope<cr>
 map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
-map <leader>n :cn<cr>
+map <leader>N :cn<cr>
 map <leader>p :cp<cr>
 
 

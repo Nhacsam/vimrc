@@ -78,7 +78,7 @@ set number
 set ruler
 
 " Height of the command bar
-set cmdheight=1
+set cmdheight=2
 
 " A buffer becomes hidden when it is abandoned
 set hid
@@ -247,7 +247,4 @@ endtry
 " Enable per-directory .vimrc files and disable unsafe commands in them
 set exrc
 set secure
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 

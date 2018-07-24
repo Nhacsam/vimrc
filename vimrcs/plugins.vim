@@ -41,11 +41,41 @@ nmap [g :GitGutterPrevHunk<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set rtp+=/usr/local/opt/fzf
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Langage Client : Autocomplete
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:deoplete#enable_at_startup = 1
+
+let g:deoplete#auto_complete_delay=150
+let g:deoplete#file#enable_buffer_path = 1
+set completeopt-=preview
+let g:echodoc#enable_at_startup = 1
+
+inoremap <silent><expr> <TAB>
+    \ pumvisible() ? "\<C-n>" :
+    \ <SID>check_back_space() ? "\<TAB>" :
+    \ deoplete#mappings#manual_complete()
+function! s:check_back_space() abort "{{{
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~ '\s'
+endfunction"}}}
+
+let g:LanguageClient_autoStart = 1
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <leader>r :call LanguageClient#textDocument_rename()<CR>
+
+let g:LanguageClient_serverCommands = {
+\ 'javascript': ['flow-language-server', '--stdio', 'try-flow-bin'],
+\ 'javascript.jsx': ['flow-language-server', '--stdio', '--try-flow-bin'],
+\ 'typescript': ['javascript-typescript-stdio'],
+\ }
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ale
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ale_sign_warning = '▲'
-let g:ale_sign_error = '✗'
 nmap <leader>ll :ALENextWrap<CR>
 nmap <leader>lo :ALEPreviousWrap<CR>
 
@@ -63,7 +93,7 @@ let g:ale_fixers = {
 \   'php': ['php_cs_fixer']
 \}
 let g:ale_linters = {
-\   'javascript': ['htmlhint', 'tsserver', 'eslint', 'flow', 'standard' ],
+\   'javascript': ['htmlhint', 'eslint', 'flow'],
 \   'php': ['php-cs']
 \}
 

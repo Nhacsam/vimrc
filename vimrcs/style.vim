@@ -73,12 +73,50 @@ if IS_FONT_INSTALLED
 endif
 
 
-" " a little more informative version of the above
-" nmap <Leader>s :call <SID>SynStack()<CR>
+"""""""""""""""""""""""""""""""""
+" => ALE
+"""""""""""""""""""""""""""""""""
+let g:ale_sign_warning = '▲'
+let g:ale_sign_error = '✗'
+let g:LanguageClient_diagnosticsDisplay = {
+    \     1: {
+    \         "name": "Error",
+    \         "texthl": "ALEError",
+    \         "signText": "✗",
+    \         "signTexthl": "ALEErrorSign",
+    \     },
+    \     2: {
+    \         "name": "Warning",
+    \         "texthl": "ALEWarning",
+    \         "signText": "▲",
+    \         "signTexthl": "ALEWarningSign",
+    \     },
+    \     3: {
+    \         "name": "Information",
+    \         "texthl": "ALEInfo",
+    \         "signText": "ℹ",
+    \         "signTexthl": "ALEInfoSign",
+    \     },
+    \     4: {
+    \         "name": "Hint",
+    \         "texthl": "ALEInfo",
+    \         "signText": "➤",
+    \         "signTexthl": "ALEInfoSign",
+    \     },
+    \ }
 
-" function! <SID>SynStack()
-"     if !exists("*synstack")
-"         return
-"     endif
-"     echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-" endfunc
+highlight link ALEWarningSign Todo
+highlight link ALEErrorSign Exception
+highlight link ALEWarning Search
+highlight link ALEError Error
+
+
+" " a little more informative version of the above
+nmap <Leader>s :call <SID>SynStack()<CR>
+
+function! <SID>SynStack()
+    if !exists("*synstack")
+        return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc

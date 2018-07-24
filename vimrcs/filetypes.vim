@@ -7,7 +7,11 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
 
-au FileType markdown setl nofen
+
+augroup markdownspell
+  autocmd Filetype markdown set spell spelllang=en_us
+augroup END
+
 
 """"""""""""""""""""""""""""""
 " => Python section
