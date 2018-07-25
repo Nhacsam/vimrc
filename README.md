@@ -13,12 +13,83 @@ All plugins and options are optimized for Javascript and PHP development.
 ## Basic Installation
 
 
-The basic installation includes the most essentials plugins and teh easiest to install.
+The basic installation includes the most essentials plugins and the easiest to install.
 To install it simply do following from your terminal:
 
     git clone --recursive https://github.com/nhacsam/vimrc.git ~/.vim_runtime
     cd ~/.vim_runtime
     sh scripts/install.sh
+
+### Activate the global search
+
+To be able to search in all files with `,g` the ack.vim plugin need `ack` or `ag`.
+
+To install it, type the following in a terminal
+
+#### On MacOS
+
+    brew install the_silver_searcher
+
+#### On Ubuntu
+
+    sudo apt-get install ack-grep
+
+#### On other platforms
+
+https://github.com/ggreer/the_silver_searcher
+
+
+### Autocompletion
+
+To have the autocompletion works, you need to have Vim > 8 or neovim
+
+
+#### On ubuntu
+
+To install vim 8 
+
+```
+sudo add-apt-repository ppa:jonathonf/vim
+sudo apt update
+sudo apt install vim
+```
+
+You should have the following error now
+
+```
+[vim-hug-neovim-rpc] Vim(pythonx):Traceback (most recent call last):
+```
+
+To install it, you need the `neovim` python package
+```
+ pip3 install neovim
+# sudo pip3 install neovim
+```
+
+
+
+
+## Colors
+
+The repostory includes everything you need to have the same colors on your terminal, vim, fzf, tmux, ... Awesome !!!
+
+To do it, edit your `.bashrc`, `.bash_profile` or `.zshrc` to add the following lines :
+
+    # Base16 Shell
+    BASE16_SHELL="$HOME/.vim_runtime/misc/base16-shell"
+    [ -n "$PS1" ] && [ -s "$BASE16_SHELL/profile_helper.sh" ] &&  eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+    base16_monokai
+    source ~/.vim_runtime/misc/base16-fzf/bash/base16-monokai.config
+
+
+All the colors scheme visibles here are available : http://chriskempson.com/projects/base16/
+
+For example, if `base16-material-darker` looks find for you, you can try it with the following command : 
+
+    base16_material-darker
+
+If it looks fine for you, you can then remplace `monokai` by `material-darker` in your `.bashrc`
 
 
 ## Complete Installation

@@ -9,19 +9,19 @@ let IS_TERMINAL = $IS_TERMINAL == 'true'
 let IS_FONT_INSTALLED = $IS_FONT_INSTALLED == 'true'
 
 function! s:base16_customize() abort
-  call Base16hi("xmlEndTag"           ,g:base16_gui0D, "", g:base16_cterm0D, "", "", "")
-  call Base16hi("xmlTag"              ,g:base16_gui0D, "", g:base16_cterm0D, "", "", "")
-  call Base16hi("xmlTagName"          ,g:base16_gui0D, "", g:base16_cterm0D, "", "", "")
-  call Base16hi("xmlAttrib"           ,g:base16_gui0A, "", g:base16_cterm0A, "", "", "")
-  call Base16hi("jsArrowFunction"     ,g:base16_gui0D, "", g:base16_cterm0D, "", "", "")
-  call Base16hi("jsFlowTypeStatement" ,g:base16_gui0A, "", g:base16_cterm0A, "", "", "")
-  call Base16hi("jsFlowDefinition"    ,g:base16_gui0A, "", g:base16_cterm0A, "", "", "")
-  call Base16hi("jsFlowNoise"         ,g:base16_gui0A, "", g:base16_cterm0A, "", "", "")
-  call Base16hi("jsFlowType"          ,g:base16_gui09, "", g:base16_cterm09, "", "", "")
-  call Base16hi("jsFlowDeclareBlock"  ,g:base16_gui0D, "", g:base16_cterm0D, "", "", "")
-  call Base16hi("jsFlow9rrow9rguments",g:base16_gui05, "", g:base16_cterm05, "", "", "")
-  call Base16hi("jsFlowObject"        ,g:base16_gui0A, "", g:base16_cterm0A, "", "", "")
-  call Base16hi("Visual"              ,"", g:base16_gui03, "", g:base16_cterm03, "", "" )
+  call g:Base16hi("xmlEndTag"           ,g:base16_gui0D, "", g:base16_cterm0D, "", "", "")
+  call g:Base16hi("xmlTag"              ,g:base16_gui0D, "", g:base16_cterm0D, "", "", "")
+  call g:Base16hi("xmlTagName"          ,g:base16_gui0D, "", g:base16_cterm0D, "", "", "")
+  call g:Base16hi("xmlAttrib"           ,g:base16_gui0A, "", g:base16_cterm0A, "", "", "")
+  call g:Base16hi("jsArrowFunction"     ,g:base16_gui0D, "", g:base16_cterm0D, "", "", "")
+  call g:Base16hi("jsFlowTypeStatement" ,g:base16_gui0A, "", g:base16_cterm0A, "", "", "")
+  call g:Base16hi("jsFlowDefinition"    ,g:base16_gui0A, "", g:base16_cterm0A, "", "", "")
+  call g:Base16hi("jsFlowNoise"         ,g:base16_gui0A, "", g:base16_cterm0A, "", "", "")
+  call g:Base16hi("jsFlowType"          ,g:base16_gui09, "", g:base16_cterm09, "", "", "")
+  call g:Base16hi("jsFlowDeclareBlock"  ,g:base16_gui0D, "", g:base16_cterm0D, "", "", "")
+  call g:Base16hi("jsFlow9rrow9rguments",g:base16_gui05, "", g:base16_cterm05, "", "", "")
+  call g:Base16hi("jsFlowObject"        ,g:base16_gui0A, "", g:base16_cterm0A, "", "", "")
+  call g:Base16hi("Visual"              ,"", g:base16_gui03, "", g:base16_cterm03, "", "" )
 
   let g:fzf_colors =
   \ { 'fg':      ['fg', 'Normal'],

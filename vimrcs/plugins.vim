@@ -32,9 +32,12 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 " => Git gutter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_enabled = 1
-set signcolumn=yes
 nmap ]g :GitGutterNextHunk<CR>
 nmap [g :GitGutterPrevHunk<CR>
+
+if v:version >= 800 || has('nvim')
+  set signcolumn=yes
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fugitive (Git integration)
