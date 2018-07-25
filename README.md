@@ -16,8 +16,9 @@ All plugins and options are optimized for Javascript and PHP development.
 The basic installation includes the most essentials plugins and teh easiest to install.
 To install it simply do following from your terminal:
 
-	git clone --recursive https://github.com/nhacsam/vimrc.git ~/.vim_runtime
-	sh ~/.vim_runtime/install.sh
+    git clone --recursive https://github.com/nhacsam/vimrc.git ~/.vim_runtime
+    cd ~/.vim_runtime
+    sh scripts/install.sh
 
 
 ## Complete Installation

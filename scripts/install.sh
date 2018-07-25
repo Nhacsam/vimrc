@@ -13,7 +13,7 @@ cd ~/.vim_runtime
 
 echo "${YELLOW}Installing Plugins${NO_COLOR}"
 
-cd ./plugins/features/LanguageClient-neovim/
+cd ./plugins/completion/LanguageClient-neovim/
 sh ./install.sh
 cd -
 
