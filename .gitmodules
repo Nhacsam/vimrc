@@ -3,22 +3,22 @@
 	url = https://github.com/powerline/fonts.git
 [submodule "misc/base16-shell"]
 	path = misc/base16-shell
-	url = git@github.com:chriskempson/base16-shell.git
+	url = https://github.com/chriskempson/base16-shell.git
 [submodule "colors_plugins/base16-vim"]
 	path = plugins/colors/base16-vim
-	url = git@github.com:chriskempson/base16-vim.git
+	url = https://github.com/chriskempson/base16-vim.git
 [submodule "misc/base16-fzf"]
 	path = misc/base16-fzf
-	url = git@github.com:nicodebo/base16-fzf.git
+	url = https://github.com/nicodebo/base16-fzf.git
 [submodule "plugins/colors/gruvbox"]
 	path = plugins/colors/gruvbox
-	url = git@github.com:morhetz/gruvbox.git
+	url = https://github.com/morhetz/gruvbox.git
 [submodule "plugins/features/LanguageClient-neovim"]
 	path = plugins/completion/LanguageClient-neovim
-	url = git@github.com:autozimu/LanguageClient-neovim.git
+	url = https://github.com/autozimu/LanguageClient-neovim.git
 [submodule "plugins/features/ack.vim"]
 	path = plugins/features/ack.vim
-	url = git@github.com:mileszs/ack.vim.git
+	url = https://github.com/mileszs/ack.vim.git
 [submodule "plugins/features/ale"]
 	path = plugins/features/ale
 	url = https://github.com/w0rp/ale

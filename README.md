@@ -16,9 +16,27 @@ All plugins and options are optimized for Javascript and PHP development.
 The basic installation includes the most essentials plugins and teh easiest to install.
 To install it simply do following from your terminal:
 
-	git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+	git clone --recursive https://github.com/nhacsam/vimrc.git ~/.vim_runtime
 	sh ~/.vim_runtime/install.sh
 
+
+## Complete Installation
+
+
+### Ubuntu
+
+
+Be sure you have the last version of vi (vim8 is recommended if you don't want to use neovim)
+
+    sudo apt-get install vim
+
+
+
+The basic installation includes the most essentials plugins and teh easiest to install.
+To install it simply do following from your terminal:
+
+	git clone --recursive https://github.com/nhacsam/vimrc.git ~/.vim_runtime
+	sh ~/.vim_runtime/install.sh
 
 
 
