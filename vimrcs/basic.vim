@@ -251,5 +251,3 @@ endtry
 set exrc
 set secure
 
-" Use the version 3 of python
-set pyxversion=3
