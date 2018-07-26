@@ -6,10 +6,23 @@
 let g:NERDTreeWinPos = "left"
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let NERDTreeMinimalUI = 1
+let NERDTreeAutoDeleteBuffer = 1
 let g:NERDTreeWinSize=35
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
+
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "~",
+    \ "Staged"    : "+",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : ">",
+    \ "Unmerged"  : "=",
+    \ "Deleted"   : "x",
+    \ "Dirty"     : "~",
+    \ "Unknown"   : "?"
+    \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
@@ -43,6 +56,7 @@ endif
 " => Fugitive (Git integration)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>b :Gblame<cr> 
+nmap <leader>d :Gvdiff<cr> 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fzf : Global Search
@@ -75,7 +89,7 @@ nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <leader>r :call LanguageClient#textDocument_rename()<CR>
 
 let g:LanguageClient_serverCommands = {
-\ 'javascript': ['flow-language-server', '--stdio', 'try-flow-bin'],
+\ 'javascript': ['flow-language-server', '--stdio', '--try-flow-bin'],
 \ 'javascript.jsx': ['flow-language-server', '--stdio', '--try-flow-bin'],
 \ 'typescript': ['javascript-typescript-stdio'],
 \ }

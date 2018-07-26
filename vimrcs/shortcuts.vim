@@ -66,8 +66,9 @@ map ; :Buffer<cr>
 map <leader>j :GitFiles<cr>
 map <leader>J :Files<cr>
 
-" Fuzzy find path with ,gf (useful when a project uses absolute imports
-au FileType javascript map <Leader>f :call fzf#vim#files('', {'options':'--query '.expand('<cfile>')})<CR>
+" Fuzzy find path with ,f (useful when a project uses absolute imports
+au FileType javascript map <leader>f :call fzf#vim#files('', {'options':'--query '.expand('<cfile>')})<CR>
+au FileType javascript.jsx map <leader>f :call fzf#vim#files('', {'options':'--query '.expand('<cfile>')})<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Linter Errors

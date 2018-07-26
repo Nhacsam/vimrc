@@ -124,6 +124,7 @@ Features :
 * [ale](https://github.com/w0rp/ale): Syntax and lint checking for vim (async)
 * [fzf](https://github.com/junegunn/fzf.vim): A fast way to search by filename, in buffers, commits, history, ...
 * [NERD Tree](https://github.com/scrooloose/nerdtree): A tree explorer plugin for vim
+* [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin): A plugin of NERDTree showing git status 
 * [open_file_under_cursor.vim](https://github.com/amix/open_file_under_cursor.vim): Open file under cursor when pressing `gf`
 * [Tabular](https://github.com/godlygeek/tabular): Line up text with tabs
 * [vim-commentary](https://github.com/tpope/vim-commentary): Comment stuff out.  
@@ -158,12 +159,45 @@ You can also install your plugins, for instance, via pathogen you can install [v
     git clone git://github.com/tpope/vim-rails.git my_plugins/vim-rails
 
 
+
+## Standards 
+
+  - :mag: View typing errors (ALE)
+    - Javascript :white_check_mark:
+      - `eslint` and `flow`
+    - PHP :white_check_mark:
+      - `phpcs`
+  - :art: Automatic formatting (ALE)
+    - javascript :white_check_mark:
+      - `prettier` and `eslint` on save
+    - php :white_check_mark:
+      - `php_cs_fixer` on save
+  - :bug: Debug :x:
+  - :package: See the list of outdated dependencies :x:
+  - :octocat: See git changes
+    - See the live added, edited and removed in the editor :white_check_mark:
+    - See the file changed in the file system :white_check_mark: (nerdtree-git-plugin)
+    - See the diff of the current file :white_check_mark: (`,d`)
+  - Use Snippets :white_check_mark: (UltiSnips)
+  - Autocomplete
+    - javascript :white_check_mark:
+    - php :white_check_mark:
+    - Relative path :white_check_mark:
+    - Absolute path :x:
+    - Other tools :warning: (naïve autocompletion)
+  - :book: See the function documentation
+    -  PHP :white_check_mark: (`K`)
+    - Javascript and PHP :warning: (`K`)
+       - partial: use flowtype definition
+  - :arrow_right: Go to the definition
+    - Javascript :warning: (`gd`)
+       - partial: Go the import at the top of the file
+    - Go to file :white_check_mark: (`gf`)
+    - Go to file in javascript absolute import :partial: (`,f` to open a search with the file name)
+
 ## Key Mappings
 
 The [leader](http://learnvimscriptthehardway.stevelosh.com/chapters/06.html#leader) is `,`, so whenever you see `<leader>` it means `,`.
-
-
-## Main Shorcut
 
 ### Plugin related mappings
 

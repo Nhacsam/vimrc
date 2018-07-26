@@ -121,3 +121,6 @@
 [submodule "plugins/completion/flow-language-server"]
 	path = plugins/completion/flow-language-server
 	url = https://github.com/flowtype/flow-language-server.git
+[submodule "plugins/interface/nerdtree-git-plugin"]
+	path = plugins/interface/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
