@@ -178,10 +178,10 @@ You can also install your plugins, for instance, via pathogen you can install [v
     - See the live added, edited and removed in the editor :white_check_mark:
     - See the file changed in the file system :white_check_mark: (nerdtree-git-plugin)
     - See the diff of the current file :white_check_mark: (`,d`)
-  - Use Snippets :white_check_mark: (UltiSnips)
-  - Autocomplete
-    - javascript :white_check_mark:
-    - php :white_check_mark:
+  - :zap: Use Snippets :white_check_mark: (UltiSnips)
+  - :spiral_notepad: Autocomplete
+    - Javascript :white_check_mark:
+    - PHP :white_check_mark:
     - Relative path :white_check_mark:
     - Absolute path :x:
     - Other tools :warning: (naïve autocompletion)
