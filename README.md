@@ -187,13 +187,13 @@ You can also install your plugins, for instance, via pathogen you can install [v
     - Other tools :warning: (naïve autocompletion)
   - :book: See the function documentation
     -  PHP :white_check_mark: (`K`)
-    - Javascript and PHP :warning: (`K`)
+    - Javascript :warning: (`K`)
        - partial: use flowtype definition
   - :arrow_right: Go to the definition
     - Javascript :warning: (`gd`)
        - partial: Go the import at the top of the file
     - Go to file :white_check_mark: (`gf`)
-    - Go to file in javascript absolute import :partial: (`,f` to open a search with the file name)
+    - Go to file in javascript absolute import :warning: partial: (`,f` to open a search with the file name)
 
 ## Key Mappings
 
