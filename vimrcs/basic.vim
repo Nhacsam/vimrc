@@ -51,6 +51,9 @@ set ffs=unix,dos,mac
 set lcs=tab:▸\ ,trail:·,nbsp:_
 set list
 
+" Don't yank the selection when pasting on it
+vnoremap p "_dP
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -94,6 +94,8 @@ let g:LanguageClient_serverCommands = {
 \ 'typescript': ['javascript-typescript-stdio'],
 \ }
 
+" \ 'php': ['~/.vim_runtime/plugins/completion/LanguageServer-php-neovim/vendor/felixfbecker/language-server/bin/php-language-server.php'],
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ale
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -115,7 +117,7 @@ let g:ale_fixers = {
 \}
 let g:ale_linters = {
 \   'javascript': ['htmlhint', 'eslint', 'flow'],
-\   'php': ['php-cs']
+\   'php': ['php-cs', 'php', 'langserver', 'phpstan']
 \}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -141,3 +143,4 @@ let g:airline_section_z = "%p%% : \ue0a1:%l/%L: Col:%c"
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+

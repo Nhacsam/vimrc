@@ -124,3 +124,9 @@
 [submodule "plugins/interface/nerdtree-git-plugin"]
 	path = plugins/interface/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule "plugins/features/vim-yankstack"]
+	path = plugins/features/vim-yankstack
+	url = https://github.com/maxbrunsfeld/vim-yankstack.git
+[submodule "plugins/completion/LanguageServer-php-neovim"]
+	path = plugins/completion/LanguageServer-php-neovim
+	url = https://github.com/roxma/LanguageServer-php-neovim.git

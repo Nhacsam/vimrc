@@ -17,6 +17,15 @@ cd ./plugins/completion/LanguageClient-neovim/
 sh ./install.sh
 cd -
 
+if command -v composer >/dev/null 2>&1; then
+  cd ./plugins/completion/LanguageServer-php-neovim
+  composer install
+  composer run-script parse-stubs
+  cd -
+else
+  echo "${RED}composer is not installed, skipping LanguageServer-php-neovim installation${NO_COLOR}"
+fi
+
 echo "${GREEN}Plugins installed${NO_COLOR}"
 
 

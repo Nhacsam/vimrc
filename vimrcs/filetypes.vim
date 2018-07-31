@@ -61,3 +61,7 @@ let g:phpcomplete_mappings = {
 
 let g:symfony_app_console_path= "bin/console"
 let g:ale_php_cs_fixer_options= ' --rules=@Symfony'
+
+" PHP ident with 4 spaces
+au FileType php set shiftwidth=4
+au FileType php  set tabstop=2
