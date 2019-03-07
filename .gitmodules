@@ -130,3 +130,6 @@
 [submodule "plugins/completion/LanguageServer-php-neovim"]
 	path = plugins/completion/LanguageServer-php-neovim
 	url = https://github.com/roxma/LanguageServer-php-neovim.git
+[submodule "plugins/features/vim-sleuth"]
+	path = plugins/features/vim-sleuth
+	url = https://github.com/tpope/vim-sleuth.git

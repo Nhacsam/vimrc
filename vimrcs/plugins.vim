@@ -92,9 +92,9 @@ let g:LanguageClient_serverCommands = {
 \ 'javascript': ['flow-language-server', '--stdio', '--try-flow-bin'],
 \ 'javascript.jsx': ['flow-language-server', '--stdio', '--try-flow-bin'],
 \ 'typescript': ['javascript-typescript-stdio'],
+\ 'php': ['~/.vim_runtime/plugins/completion/LanguageServer-php-neovim/vendor/felixfbecker/language-server/bin/php-language-server.php'],
 \ }
 
-" \ 'php': ['~/.vim_runtime/plugins/completion/LanguageServer-php-neovim/vendor/felixfbecker/language-server/bin/php-language-server.php'],
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ale

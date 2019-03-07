@@ -2,8 +2,8 @@ snippet component
 // @flow
 import * as React from 'react';
 
-type Props = {
-};
+type Props = {|
+|};
 
 class ${1:Component} extends React.PureComponent<Props> {
   render() {
@@ -14,6 +14,32 @@ class ${1:Component} extends React.PureComponent<Props> {
   }
 }
 export default $1;
+endsnippet
+
+
+
+snippet componentjss
+// @flow
+import * as React from 'react';
+import { default as injectStyle, type JssAddedProps } from 'react-jss';
+import type { Theme } from 'theme';
+
+type Props = {|
+|};
+
+class ${1:Component} extends React.PureComponent<Props & JssAddedProps<typeof styles, Theme>> {
+  render() {
+    const { classes } = this.props;
+    return (
+      <div>
+      </div>
+    );
+  }
+}
+const styles = (theme: Theme): * => ({
+});
+
+export default injectStyle(styles)($1);
 endsnippet
 
 snippet actions
@@ -62,7 +88,11 @@ const fetch$1sError = (error: Error): FetchErrorAction => ({
 endsnippet
 
 snippet reducer
-type State = {};
+// @flow
+
+type State = $ReadOnly<{
+
+}>;
 
 const initialState = {};
 
@@ -75,3 +105,35 @@ export default function reducer(state: State = initialState, action: Action): St
 endsnippet
 
 
+snippet modulekey
+export const MODULE_KEY: '$1' = '$1';
+type GlobalState = { [typeof MODULE_KEY]: State };
+endsnippet
+
+snippet container
+// @flow
+import * as React from 'react';
+import { connect } from 'react-redux';
+
+import {  } from 'store';
+import ${1:Component} from './$1';
+
+type Props = {|
+|};
+
+const mapStateToProps = state => ({
+});
+
+const mapDispatchToProps = {
+};
+
+const Connected$1: React.ComponentType<Props> = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)($1);
+export default Connected$1;
+endsnippet
+
+snippet log
+console.log('$1', $1);
+endsnippet

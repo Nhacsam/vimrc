@@ -22,6 +22,7 @@ function! s:base16_customize() abort
   call g:Base16hi("jsFlow9rrow9rguments",g:base16_gui05, "", g:base16_cterm05, "", "", "")
   call g:Base16hi("jsFlowObject"        ,g:base16_gui0A, "", g:base16_cterm0A, "", "", "")
   call g:Base16hi("Visual"              ,"", g:base16_gui03, "", g:base16_cterm03, "", "" )
+  call g:Base16hi("Comment"        ,g:base16_gui04, "", g:base16_cterm04, "", "", "")
 
   let g:fzf_colors =
   \ { 'fg':      ['fg', 'Normal'],
