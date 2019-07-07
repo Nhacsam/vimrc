@@ -133,3 +133,6 @@
 [submodule "plugins/features/vim-sleuth"]
 	path = plugins/features/vim-sleuth
 	url = https://github.com/tpope/vim-sleuth.git
+[submodule "plugins/language/vim-ruby"]
+	path = plugins/language/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby
