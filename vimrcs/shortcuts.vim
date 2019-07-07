@@ -71,12 +71,6 @@ au FileType javascript map <leader>f :call fzf#vim#files('', {'options':'--query
 au FileType javascript.jsx map <leader>f :call fzf#vim#files('', {'options':'--query '.expand('<cfile>')})<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Linter Errors
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <leader>ll :ALENextWrap<CR>
-nmap <leader>lo :ALEPreviousWrap<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pressing ,ss will toggle and untoggle spell checking

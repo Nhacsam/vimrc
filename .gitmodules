@@ -136,3 +136,7 @@
 [submodule "plugins/language/vim-ruby"]
 	path = plugins/language/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby
+[submodule "plugins/completion/coc"]
+	path = plugins/completion/coc
+	url = https://github.com/neoclide/coc.nvim.git
+	branch = release

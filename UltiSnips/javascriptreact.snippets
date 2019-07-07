@@ -1,0 +1,165 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+snippet component
+// @flow
+import * as React from 'react';
+
+type Props = {|
+|};
+
+class ${1:Component} extends React.PureComponent<Props> {
+  render() {
+    return (
+      <div>
+      </div>
+    );
+  }
+}
+export default $1;
+endsnippet
+
+
+
+snippet componentjss
+// @flow
+import * as React from 'react';
+import { default as injectStyle, type JssAddedProps } from 'react-jss';
+import type { Theme } from 'theme';
+
+type Props = {|
+|};
+
+class ${1:Component} extends React.PureComponent<Props & JssAddedProps<typeof styles, Theme>> {
+  render() {
+    const { classes } = this.props;
+    return (
+      <div>
+      </div>
+    );
+  }
+}
+const styles = (theme: Theme): * => ({
+});
+
+export default injectStyle(styles)($1);
+endsnippet
+
+snippet actions
+export type ${1:Entity} = {
+};
+
+type FetchAction = {
+  type: 'FETCH_${2:ENTITY}',
+};
+
+type FetchSuccessAction = {
+  type: 'FETCH_$2_SUCCESS',
+  payload: number[],
+  meta: {
+    entities: {
+      [number]: $1,
+    },
+  },
+};
+
+type FetchErrorAction = {
+  type: 'FETCH_$2_ERROR',
+  payload: Error,
+  error: boolean,
+};
+
+type Action = FetchAction | FetchSuccessAction | FetchErrorAction;
+
+const fetch$1s = (): FetchAction => ({
+  type: 'FETCH_$2',
+});
+
+const fetch$1sSuccess = (normalizedResults: any): FetchSuccessAction => ({
+  type: 'FETCH_$2_SUCCESS',
+  payload: normalizedResults.results,
+  meta: {
+    entities: normalizedResults.entities,
+  },
+});
+
+const fetch$1sError = (error: Error): FetchErrorAction => ({
+  type: 'FETCH_$2_ERROR',
+  payload: error,
+  error: true,
+});
+endsnippet
+
+snippet reducer
+// @flow
+
+type State = $ReadOnly<{
+
+}>;
+
+const initialState = {};
+
+export default function reducer(state: State = initialState, action: Action): State {
+  switch (action.type) {
+    default:
+      return state;
+  }
+}
+endsnippet
+
+
+snippet modulekey
+export const MODULE_KEY: '$1' = '$1';
+type GlobalState = { [typeof MODULE_KEY]: State };
+endsnippet
+
+snippet container
+// @flow
+import * as React from 'react';
+import { connect } from 'react-redux';
+
+import {  } from 'store';
+import ${1:Component} from './$1';
+
+type Props = {|
+|};
+
+const mapStateToProps = state => ({
+});
+
+const mapDispatchToProps = {
+};
+
+const Connected$1: React.ComponentType<Props> = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)($1);
+export default Connected$1;
+endsnippet
+
+snippet log
+console.log('$1', $1);
+endsnippet
