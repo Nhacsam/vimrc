@@ -13,7 +13,7 @@ map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
 
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "~",
     \ "Staged"    : "+",
     \ "Untracked" : "✭",
@@ -63,13 +63,12 @@ nmap <leader>d :Gvdiff<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set rtp+=~/.fzf
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Coc (Conquer Of Completion)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " You will have bad experience for diagnostic messages when it's default 4000.
-set updatetime=300
+set updatetime=1500
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.

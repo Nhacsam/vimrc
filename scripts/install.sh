@@ -34,7 +34,7 @@ if command -v fzf >/dev/null 2>&1; then
 else
   echo "${YELLOW}Installing Fzf, see more here : https://github.com/junegunn/fzf${NO_COLOR}"
 
-  cp -R ./misc/fzf ~/.fzf
+  cp -R ./plugins/features/fzf ~/.fzf
   ~/.fzf/install
 
   echo "${GREEN}FZF installed${NO_COLOR}"

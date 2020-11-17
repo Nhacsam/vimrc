@@ -31,9 +31,6 @@
 [submodule "plugins/features/echodoc"]
 	path = plugins/interface/echodoc
 	url = https://github.com/shougo/echodoc
-[submodule "misc/fzf"]
-	path = misc/fzf
-	url = https://github.com/junegunn/fzf
 [submodule "plugins/features/fzf.vim"]
 	path = plugins/features/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
@@ -140,3 +137,6 @@
 	path = plugins/completion/coc
 	url = https://github.com/neoclide/coc.nvim.git
 	branch = release
+[submodule "plugins/features/fzf"]
+	path = plugins/features/fzf
+	url = https://github.com/junegunn/fzf.git

@@ -1,0 +1,75 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+snippet component "Create component" b
+import React from 'react';
+import { createUseStyles, useTheme } from 'react-jss';
+import { Theme } from 'theme';
+
+const useStyles = createUseStyles((theme: Theme) => ({
+}));
+
+interface Props {
+}
+
+export const `!p snip.rv = snip.fn.split('.')[0]` = (props: Props) => {
+  const theme = useTheme();
+  const classes: any = useStyles({ theme });
+
+  return (
+    $1
+  );
+}
+endsnippet
+
+snippet classes "className classes" 
+className={classes.$1} 
+endsnippet
+
+
+snippet router "router index" b
+import React from 'react';
+import { Route, Switch, RouteComponentProps } from 'react-router';
+import { NotFoud } from 'components/NotFound/NotFoud';
+
+interface Props extends RouteComponentProps {}
+
+export const `!p
+folders = path.split('/')
+if len(folders) < 2:
+  snip.rv = folders[0]
+else:
+  snip.rv = folders[len(folders) - 2]
+` = (props: Props) => {
+  const path = props.match.path;
+  return (
+    <Switch>
+      <Route path={\`\${path}/\`} component={} />
+      <NotFoud />
+    </Switch>
+  );
+};
+endsnippet
