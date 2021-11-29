@@ -36,8 +36,8 @@ interface Props {
 }
 
 export const `!p snip.rv = snip.fn.split('.')[0]` = (props: Props) => {
-  const theme = useTheme();
-  const classes: any = useStyles({ theme });
+  const theme = useTheme<Theme>();
+  const classes = useStyles({ theme });
 
   return (
     $1
